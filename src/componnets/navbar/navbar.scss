@@ -1,0 +1,175 @@
+@import "../../scss/mixin";
+
+.navbar{
+  
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+ .light-nav{
+
+  background-color: rgb(25, 118, 210);
+  .moon{
+    display: none;
+  }
+}
+.dark-nav{
+  background-color: rgb(28, 27, 27);
+  .sun{
+    display: none;
+  }
+
+}
+.navbar-mobile{
+  @include size(100%,100px);
+  padding: 10px 15px 0 15px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+ .top{
+  @include flex($justify:space-between);
+  margin-bottom: 18px;
+    .icon{
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+    .sign{
+        @include flex($align:center);
+     span{
+        margin-right: 10px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+     }
+    }
+ }
+  .search-mobile{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    input{
+        border: none;
+        border-bottom: 1px solid rgba(219, 207, 207,0.514);
+        background-color: transparent;
+        width: 60%;
+        padding: 4px 4px 8px 35px;
+        color: #fff;
+        font-size: 16px;
+       
+          &:hover{
+            border-bottom: 1px solid white;
+          }
+          &:focus{
+            border-bottom: 2px solid orange;
+            outline: none;
+          }
+      
+    }
+
+    .logo{
+        position: absolute;
+        font-size: 25px;
+        top: 3px;
+        left: 74px;
+        color: rgba(252,247,247,0.555);
+
+    }
+  }
+}
+.navbar-desktop{
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-mobile{
+    display:none;
+  }
+  .light-nav{
+    .moon{
+      display: none;
+    }
+    .nav{
+      background-color: rgb(25, 118, 210);
+    }
+  }
+  .dark-nav{
+    .sun{
+      display: none;
+    }
+    .nav{
+      background-color: rgb(28, 27, 27);
+    }
+  }
+ .navbar-desktop{
+  
+    display: block;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+   .main{
+    display: flex;
+    .side{
+      width: 16%;
+    }
+    .nav{
+      @include size(86%,90px);
+    
+      @include flex(row,space-between,center);
+      padding: 0 30px;
+     
+      .icon{
+        font-size: 32px;
+        color: white;
+        cursor: pointer; 
+       }
+       .sun{
+        margin-left: 25px;
+       }
+       .moon{
+        margin-left: 25px;
+       }
+    .sign{
+        @include flex($align:center);
+        margin-right:20px;
+     span{
+        margin-right: 10px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        cursor: pointer;
+     }
+    }
+    .search-desktop{
+      width: 25%;
+      text-align: center;
+      position: relative;
+      input{
+          border: none;
+          border-bottom: 1px solid rgba(219, 207, 207,0.514);
+          background-color: transparent;
+          width: 60%;
+          padding: 4px 4px 8px 35px;
+          color: #fff;
+          font-size: 16px;
+          transition: 350ms ;   
+          &:hover{
+            border-bottom: 1px solid white;
+          }
+          &:focus{
+            border-bottom: 2px solid orange;
+            outline: none;
+          }
+      }
+      .logo{
+          position: absolute;
+          font-size: 28px;
+          top: 1px;
+          left: 74px;
+          color: rgba(252,247,247,0.555);
+  
+      }
+    }
+    }
+
+  }
+}
+}
+
+}

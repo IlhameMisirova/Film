@@ -1,0 +1,113 @@
+@import "../../scss/mixin";
+
+
+.light-side{
+        background-color: white;
+    
+   
+    .link{
+        color: #000000;
+    }
+}
+.dark-side{
+  background-color: rgb(12, 12, 12);
+  .link{
+    color: white;
+  }
+}
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include size(100%,100%);
+    background-color: #37373780;
+    overflow: hidden;
+    z-index: 1;
+}
+.sidebar{
+    position: fixed;
+    padding-top: 20px;
+    @include size(60%,100%);
+    transition:all 400ms;
+    top:0;
+    right:-100%;
+    overflow-y: auto;
+    
+    &.active {
+        right: 0;
+    }
+    &::-webkit-scrollbar {
+        width: 7px;
+      }
+    &::-webkit-scrollbar-track {
+        background: #cfcfcf; 
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #a5a5a5; 
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgb(124, 123, 123); 
+      }
+
+    
+    .img{
+        @include flex(row,center,center);
+    
+    .logo{
+        @include size(160px,55px);
+        margin-bottom: 20px;
+        
+    }
+}
+    .categories{
+        padding: 10px 0;
+    
+    }
+    .line{
+        @include size(100%,1px);
+        background-color: #cfcfcf;
+        margin-bottom: 18px;
+        margin-top: 10px;
+    }
+   
+    .title{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #a5a5a5;
+        margin-bottom: 20px;
+        padding-left: 23px;
+    }
+    .genres{
+        padding: 10px 0 ;
+    }
+ 
+    li{
+        .link{
+             display: flex;
+             align-items: center;
+             gap:20px;
+             font-size: 18px;
+            //  color: #000000;
+             font-family: 'Roboto', sans-serif;
+             @include size(100%,50px);
+             padding-left: 23px;
+             cursor:pointer;
+             .icon{
+                @include size(28px,28px);
+            }
+             &:hover{
+                background-color: rgba(0, 0, 0,0.04);
+             }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .sidebar{
+        width:16%;
+        padding-right: 0;
+        right: unset;
+        left: 0;
+    }
+}

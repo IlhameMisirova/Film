@@ -1,0 +1,348 @@
+@import "../../scss/mixin";
+
+
+.light-movInfo{
+
+    .movieTitle{
+        color: #000;
+    }
+    .content{
+        color: #000;
+    }
+    .aver{
+        color: #000;
+    }
+    .time{
+        color: #000;
+    }
+    .genre{
+        .icon{
+            color: #000;
+        }
+        p{
+            color: rgba(0, 0, 0, 0.87);
+        }
+    }
+    .overview{
+        h5{
+            color: black;
+        }
+        p{
+            color:  black;
+        }
+    }
+    .topCast{
+        h5{
+            color: #000;
+        }
+        .actorName{
+             color: rgba(0, 0, 0, 0.87);;
+
+        }
+        .actorMovieName{
+            color: rgba(0, 0, 0, 0.6);
+
+        }
+    }
+    .title{
+        color: #000;
+    }
+    .buttons{
+        button{
+            background-color: white ;
+            border: 1px solid rgba(25, 118, 210, 0.5);
+            a{
+              color: rgb(25, 118, 210); ;
+            }
+        }
+    }
+    .btn{
+        color: rgb(25, 118, 210);
+    }
+}
+.dark-movInfo{
+    .movieTitle{
+        color: white;
+    }
+    .content{
+        color: white;
+    }
+    .aver{
+        color: white;
+    }
+    .time{
+        color: white;
+    }
+    .genre{
+        .icon{
+            color: white;
+        }
+        p{
+            color:  white;
+        }
+    }
+    .overview{
+        h5{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+    }
+    .topCast{
+        h5{
+            color: white
+        }
+        .actorName{
+             color:  white;
+
+        }
+        .actorMovieName{
+            color: #b8b8ae;
+
+        }
+    }
+    .title{
+        color: white;
+    }
+    .buttons{
+        button{
+            background-color: rgb(12, 12, 12);
+            border: 1px solid #90caf9;
+            a{
+              color: #90caf9;
+            }
+        }
+    }
+    .btn{
+        color: #90caf9;
+
+    }
+}
+
+
+.movieInfo{ 
+    top:0;
+    z-index:1;
+    .movie{
+        @include flex(column,$justify:center);
+        .img{
+            @include flex(row,center,center);
+            img{
+                @include size(235px,350px);
+                margin: 0 auto;
+                margin-bottom: 30px;
+                margin-top: 30px;
+                box-shadow: 0.5em 1em 1em rgb(64 64 70);
+                border-radius: 20px;
+            }   
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            padding: 0 40px;
+                .movieTitle{
+                    font-family: Roboto, Helvetica, Arial, sans-serif; 
+                    @include font(3rem,400,1.16);
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+                 .content{
+                    font-family: Roboto, Helvetica, Arial, sans-serif;
+                    @include font(1.5rem,400,1.33);
+                    text-align:center;
+                }
+                .nn{
+                    .totalTip{
+                        @include flex(row,center,center);
+                        margin-top: 15px;
+                        margin-bottom: 8px;
+                        .aver{
+                        font-family: Roboto, Helvetica, Arial, sans-serif;
+                        @include font(1rem,400,1.75);
+                        margin-left: 15px;
+
+                    }
+                }
+                    .time{
+                        font-family: Roboto, Helvetica, Arial, sans-serif;
+                        @include flex(row,center,center);
+                        @include font(1.25rem,400,1.6);
+                        letter-spacing: 0.0075em;
+                     
+                    }
+
+                }
+                .genres{
+                    @include flex(row,space-around,center);
+                    margin:10px 0;
+                    .genre{
+                        @include flex(row,center,center);
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        margin-top: 10px;
+                        .icon{
+                            @include size(32px,32px);
+                        }
+                        p{
+                                font-family: Roboto, Helvetica, Arial, sans-serif;
+                                @include font(1rem,400,1.75);
+                                letter-spacing: 0.00938em;
+                               
+                        }
+
+                    }
+
+                }  
+                
+                .overview{
+                    margin-top: 15px;
+                    h5{
+                        font-family: Roboto, Helvetica, Arial, sans-serif;
+                        @include font(1.5rem,400,1.33);
+                        margin-bottom: 8px;
+                    }
+                    p{
+                        font-family: Roboto, Helvetica, Arial, sans-serif;
+                        @include font(1rem,400,1.5);
+                        letter-spacing: 0.009em;
+                        text-align: justify;
+                    }
+                }
+                .topCast{
+                    h5{
+                        font-family: Roboto, Helvetica, Arial, sans-serif;
+                        @include font(1.5rem,400,1.33);
+                        margin-top: 30px;
+                    }
+                   .actors{
+                    @include flex(row,$justify:space-around);
+                    flex-wrap: wrap;
+                    margin-top: 20px;
+                    gap: 20px 15px;
+                    .actor{
+                        width: 93px;
+                        cursor: pointer;
+                        img{
+                            @include size(100%,8em);
+                            max-width: 7em;
+                            object-fit: cover;
+                            border-radius: 10px
+                        }
+                        .actorName{
+                            font-family: Roboto, Helvetica, Arial, sans-serif;
+                            @include font(1rem,400,1.5);
+                            letter-spacing: 0.00938em;
+                            margin-bottom: 5px;
+                        }
+                        .actorMovieName{
+                            font-family: Roboto, Helvetica, Arial, sans-serif;
+                            @include font(1rem,400,1.5);
+                            letter-spacing: 0.00938em;                
+                        }
+                    }
+                    }    
+                   
+                }
+                .buttons{
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                   .rb{
+                    display: flex;
+                    gap: 10px;
+                   }
+                   button{
+                    padding: 3px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &:hover{
+                        border-color: rgb(25, 118, 210);
+                    }
+                    a{
+                    @include flex(row,center,center);
+                    gap: 5px;
+                    }
+                  
+                }
+                .btn{
+                    @include flex(row,center,center);
+                    gap: 5px;
+                   
+
+                }
+                }
+
+        }
+    }
+    .title{
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        @include font(3.1rem,400,1.16);
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+  
+         }
+  .cards{
+    @include flex(column,$align:center);
+    gap: 10px;
+    }
+    .player{
+        position: fixed;
+        left:0;
+        top:0;
+        @include flex(row,center,center);
+        @include size(100%,100%);
+        background-color: rgba($color:#000, $alpha:0.5);
+        z-index:1;
+      
+    }
+}
+@media only screen and (min-width: 992px){
+  .movieInfo{
+    .movie{
+        @include flex(row, space-around,flex-start);
+        padding: 30px 25px;
+        margin-left: 16%;
+        width: 83%; 
+        gap: 40px;
+       
+        .img{
+            img{
+                @include size(350px,530px);
+                margin:0;
+            }
+        }
+        .info{
+            width: 60%;
+            .topCast{
+                .actors{
+                    gap: 10px 15px;
+                    .actor{
+                        width: 110px;
+                    }
+                }
+            }
+            .buttons{
+                button{
+                    width: 110px;
+                    height: 37px;
+                 
+                }
+            }
+
+        } 
+    }
+    .title{
+        margin-left: 17%;
+    }
+    .cards{
+     
+        @include flex(row,$justify:space-evenly);
+        flex-wrap: wrap;
+        margin-right: 10px;
+        margin-left: 16%;
+    }
+  
+}
+  }
